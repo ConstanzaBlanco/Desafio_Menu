@@ -11,16 +11,20 @@ public class Menu
     private ArrayList dishes = new ArrayList();
     public string AddDish(object platillo)
     {
-        Dish.dishes.add(platillo)
+        this.dishes.add(platillo)
     }
     public string RemoveDish(object platillo)
     {
-        Dish.dishes.Remove(platillo)
+        this.dishes.Remove(platillo)
     }
 
     public bool GetDishByName(string platillo)
     {
-        Dish.dishes.Contains(platillo)
+        if (this.dishes.Contains(platillo) == true)
+        {
+            return this.Name
+        }
+        return null
     }
     public Menu()
     {
