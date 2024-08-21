@@ -22,5 +22,8 @@ public class Menu
     {
         Dish.dishes.Contains(platillo)
     }
-    
+    public Menu()
+    {
+        this.dishes = new Arraylist 
+    }
 }
