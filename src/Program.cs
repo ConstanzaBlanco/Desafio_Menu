@@ -3,7 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Dish ensalada = new Dish("Ensalada", 10, false);
+        Dish ensalada = new Dish("Ensalada", 10, true);
         Dish strogonof = new Dish("Strogonof", 20, false);
         Dish pizza = new Dish("Pizza", 10, true);
         Dish hamburguesa = new Dish("Hamburguesa", 15, false);
