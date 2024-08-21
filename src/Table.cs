@@ -26,13 +26,19 @@ public class Table
 
     public bool Occupy()
     {
-        return 
+        return this.isoccupied;
+    }
+
+    public void Free()
+    {
+        this.order.Clear();
+        this.isoccupied = false;
     }
     
-    
-    
-    
-    
+    public void AddToOrder(Dish dish)
+    {
+        this.order.Add(dish);
+    }
     
     public bool HasOrders()
     {
