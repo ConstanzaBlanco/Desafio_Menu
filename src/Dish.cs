@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Security.Cryptography;
 
@@ -6,30 +7,39 @@ namespace Ucu.Poo.Restaurant;
 /// <summary>
 /// Representa un platillo individual en el menú del restaurante.
 /// </summary>
-public class Dish 
+public class Dish
 {
-    private string Name
+    private string name;
+    public string Name
     {
-        get { return Name; }
-        set { Name = value; }
+        get { return name; }
+        set { name = value; }
     }
 
-    private string Price
+    private float price;
+    public float Price
     {
-        get { return Price; }
-        set { Price = value; }
+        get { return price; }
+        set { price = value; }
     }
 
-    private string IsVegetarian
+    private bool isvegetarian;
+    public bool IsVegetarian
     {
-        get { return IsVegetarian; }
-        set { IsVegetarian = value; }
+        get { return isvegetarian; }
+        set { isvegetarian = value; }
     }
 
-    public Dish(string name, string price, string isvegetarian)
+    public Dish(string name, float price, bool isvegetarian)
     {
         this.Name = name;
         this.Price = price;
         this.IsVegetarian = isvegetarian;
     }
+
+    public void Description()
+    {
+        Console.WriteLine($"nombre: {this.Name} precio: {this.Price}$ Es Vegatariano: {this.IsVegetarian}");
+    }
 }
+
