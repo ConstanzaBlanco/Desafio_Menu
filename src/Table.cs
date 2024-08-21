@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices.JavaScript;
+
 namespace Ucu.Poo.Restaurant;
 
 using System.Collections;
@@ -43,5 +45,11 @@ public class Table
     public bool HasOrders()
     {
         return this.order.Count > 0;
+    }
+
+    public Table(int numero, bool OcupadaoNo)
+    {
+        number = numero;
+        isoccupied = OcupadaoNo;
     }
 }
