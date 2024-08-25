@@ -1,4 +1,4 @@
-﻿namespace Ucu.Poo.Restaurant;
+namespace Ucu.Poo.Restaurant;
 class Program
 {
     static void Main(string[] args)
