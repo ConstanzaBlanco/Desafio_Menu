@@ -16,12 +16,12 @@ public class Waiter
 
     public void AssignTable(Table table)
     {
-         assignedTables.Add(Table.Number) ;
+         assignedTables.Add(table.Number) ;
     }
 
     public void TakeOrder(Table table, Dish dish)
     {
-        (Table.Number).AddToOrder(dish);
+        (table.Number).AddToOrder(dish);
         
     }
 }
