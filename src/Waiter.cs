@@ -14,12 +14,12 @@ public class Waiter
         set { name = value; }
     }
 
-    public void AssignTable(Table Number)
+    public void AssignTable(Table table)
     {
          assignedTables.Add(Table.Number) ;
     }
 
-    public void TakeOrder(Table Number, Dish dish)
+    public void TakeOrder(Table table, Dish dish)
     {
         (Table.Number).AddToOrder(dish);
         

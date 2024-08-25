@@ -11,7 +11,7 @@ public class Menu
     private ArrayList dishes = new ArrayList();
     public string AddDish(object platillo)
     {
-        this.dishes.add(platillo)
+        this.dishes.Add(platillo)
     }
     public string RemoveDish(object platillo)
     {
