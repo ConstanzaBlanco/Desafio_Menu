@@ -21,7 +21,7 @@ public class Waiter
 
     public void TakeOrder(Table table, Dish dish)
     {
-        (table.Number).AddToOrder(dish);
+        table.AddToOrder(dish);
         
     }
 }
