@@ -16,8 +16,8 @@ public class Dish
         set { name = value; }
     }
 
-    private float price;
-    public float Price
+    private double price;
+    public double Price
     {
         get { return price; }
         set { price = value; }
@@ -30,7 +30,7 @@ public class Dish
         set { isvegetarian = value; }
     }
 
-    public Dish(string name, float price, bool isvegetarian)
+    public Dish(string name, double price, bool isvegetarian)
     {
         this.Name = name;
         this.Price = price;
