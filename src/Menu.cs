@@ -9,25 +9,37 @@ using System.Collections;
 public class Menu
 {
     private ArrayList dishes = new ArrayList();
-    public string AddDish(object platillo)
+
+    public ArrayList Dishes
     {
-        this.dishes.Add(platillo)
-    }
-    public string RemoveDish(object platillo)
-    {
-        this.dishes.Remove(platillo)
+        get {return dishes;}
     }
 
-    public bool GetDishByName(string platillo)
+    public void AddDish(Dish platillo)
     {
-        if (this.dishes.Contains(platillo) == true)
-        {
-            return this.Name
-        }
-        return null
+        dishes.Add(platillo);
     }
-    public Menu()
+
+    public void RemoveDish(Dish platillo)
     {
-        this.dishes = new Arraylist 
+        dishes.Remove(platillo);
+    }
+
+    public object GetDishByName(string platillo)
+    {
+        if (dishes.Contains(platillo))
+        {
+            return platillo;
+        }
+
+        return null;
+    }
+
+    public void Print_Menu()
+    {
+        foreach (Dish platillo in Dishes)
+        {
+            Console.WriteLine(platillo.Name);
+        }
     }
 }
