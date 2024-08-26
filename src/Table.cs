@@ -19,14 +19,14 @@ public class Table
 
     private bool isoccupied;
 
-    public bool IsOcuppied
+    public bool IsOccupied
     {
         get { return this.isoccupied;}
         set { isoccupied = value; }
     }
     private ArrayList order = new ArrayList();
 
-    public bool Occupy()
+    public bool Ocupy()
     {
         return this.isoccupied;
     }
@@ -47,9 +47,8 @@ public class Table
         return this.order.Count > 0;
     }
 
-    public Table(int numero, bool OcupadaoNo)
+    public Table(int numero)
     {
         number = numero;
-        isoccupied = OcupadaoNo;
     }
 }
