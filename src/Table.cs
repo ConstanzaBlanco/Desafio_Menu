@@ -51,4 +51,16 @@ public class Table
     {
         number = numero;
     }
+
+    public double GetTotal()
+    {
+        double total = 0;
+        foreach (Dish dish in this.order)
+        {
+            total += dish.Price;
+        }
+
+        return total;
+    }
 }
+

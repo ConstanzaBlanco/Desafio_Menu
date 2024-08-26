@@ -24,4 +24,9 @@ public class Waiter
         table.AddToOrder(dish);
         
     }
+
+    public void GetTotal(Table table)
+    {
+        table.GetTotal();
+    }
 }
