@@ -12,5 +12,22 @@ class Program
         Dish milanesa = new Dish("Milanesa", 15, false);
         Dish asado = new Dish("Asado", 20, false);
         ensalada.Description();
+        Menu Menu_del_dia = new Menu();
+        Menu_del_dia.AddDish(milanesa);
+        Menu_del_dia.AddDish(pizza);
+        Menu_del_dia.AddDish(hamburguesa);
+        Menu_del_dia.Print_Menu();
+        Console.WriteLine(Menu_del_dia.GetDishByName("Hamburguesa"));
+        Table PrimerMesa = new Table(1);
+        Console.WriteLine(PrimerMesa.IsOccupied.ToString());
+        Order OrdenPrimerMesa = new Order();
+        OrdenPrimerMesa.AddToOrder(hamburguesa);
+        OrdenPrimerMesa.AddToOrder(pizza);
+        PrimerMesa.emparejar(OrdenPrimerMesa);
+        PrimerMesa.HasOrders();
+        Console.WriteLine(PrimerMesa.IsOccupied.ToString());
+        Waiter Jose = new Waiter();
+        Jose.AssignTable(PrimerMesa);
+        Console.WriteLine(Jose.GetTotal(PrimerMesa).ToString());
     }
 }
