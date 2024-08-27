@@ -8,6 +8,7 @@ namespace Ucu.Poo.Restaurant;
 public class Waiter
 {
     private ArrayList assignedTables = new ArrayList();
+    private Order context;
     private string name 
     {
         get { return this.name; }
@@ -16,17 +17,16 @@ public class Waiter
 
     public void AssignTable(Table table)
     {
-         assignedTables.Add(table.Number) ;
+        assignedTables.Add(table.Number) ;
     }
 
     public void TakeOrder(Table table, Dish dish)
     {
-        table.AddToOrder(dish);
-        
+        context.AddToOrder(dish);
     }
-
-    public void GetTotal(Table table)
+    
+    public double GetTotal(Table mesa)
     {
-        table.GetTotal();
+        return mesa.Dar_emparejada().GetTotal();
     }
 }
