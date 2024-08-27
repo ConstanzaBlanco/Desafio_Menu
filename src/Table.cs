@@ -10,13 +10,18 @@ using System.Collections;
 public class Table
 {
     private int number;
-
+    private Order context;
+    private ArrayList Lista_platos = new ArrayList();
     public int Number
     {
         get { return this.number;}
         set { number = value; }
     }
 
+    public void emparejar(Order order)
+    {
+        this.context = order;
+    }
     private bool isoccupied;
 
     public bool IsOccupied
@@ -24,43 +29,31 @@ public class Table
         get { return this.isoccupied;}
         set { isoccupied = value; }
     }
-    private ArrayList order = new ArrayList();
 
     public bool Ocupy()
     {
         return this.isoccupied;
     }
-
-    public void Free()
+    
+    public void FreeTable()
     {
-        this.order.Clear();
+        this.context.Platos.Clear();
         this.isoccupied = false;
     }
-    
-    public void AddToOrder(Dish dish)
+
+    public Order Dar_emparejada()
     {
-        this.order.Add(dish);
+        return this.context;
     }
-    
     public bool HasOrders()
     {
-        return this.order.Count > 0;
+        this.isoccupied = true;
+        return this.context.Platos.Count > 0;
     }
 
     public Table(int numero)
     {
         number = numero;
     }
-
-    public double GetTotal()
-    {
-        double total = 0;
-        foreach (Dish dish in this.order)
-        {
-            total += dish.Price;
-        }
-
-        return total;
-    }
+    
 }
-
