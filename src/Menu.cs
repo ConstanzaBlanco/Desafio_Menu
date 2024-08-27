@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace Ucu.Poo.Restaurant;
 
 using System.Collections;
@@ -8,9 +10,9 @@ using System.Collections;
 /// </summary>
 public class Menu
 {
-    private ArrayList dishes = new ArrayList();
+    private List<Dish> dishes = new List<Dish>();
 
-    public ArrayList Dishes
+    public List<Dish> Dishes
     {
         get {return dishes;}
     }
@@ -27,11 +29,14 @@ public class Menu
 
     public object GetDishByName(string platillo)
     {
-        if (dishes.Contains(platillo))
+        foreach (Dish plato in dishes)
         {
-            return platillo;
+            Console.WriteLine(plato.Name);
+            if (plato.Name == platillo)
+            {
+                return plato;
+            }
         }
-
         return null;
     }
 
@@ -39,7 +44,7 @@ public class Menu
     {
         foreach (Dish platillo in Dishes)
         {
-            Console.WriteLine(platillo.Name);
+            platillo.Description();
         }
     }
 }
